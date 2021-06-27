@@ -21,7 +21,11 @@ const Header = () => {
   window.addEventListener("scroll", scrollHeader);
   return (
     <div
-      className={navbarScroll ? "navbar-bg-color active" : "navbar-bg-color"}
+      className={
+        navbarScroll
+          ? "navbar-bg-color active fixed-top"
+          : "navbar-bg-color fixed-top"
+      }
     >
       <nav className="">
         <div className="container d-flex justify-content-between align-items-center">
@@ -35,7 +39,7 @@ const Header = () => {
             </label>
             <ul className="navbar-style-ul">
               <li>
-                <Link className="menu-items" href="#">
+                <Link className="menu-items" href="/home">
                   Home
                 </Link>
               </li>
@@ -59,18 +63,22 @@ const Header = () => {
                   Contact
                 </Link>
               </li>
-              <li className="ms-md-3">
+              <li className="">
                 <Link className="menu-items active" href="#">
                   Form Registration
                 </Link>
               </li>
-              <li className="ms-md-4">
+              <li className="text-center">
                 <Link className="menu-items" href="#">
-                  <FontAwesomeIcon className="" icon={faShoppingCart} />
-                  <span className=''> 0</span>
+                  <FontAwesomeIcon
+                    className=""
+                    icon={faShoppingCart}
+                    size="lg"
+                  />
+                  <span className="">0</span>
                 </Link>
-                <Link className="menu-items ms-md-4" href="#">
-                  <FontAwesomeIcon className="" icon={faUser} />
+                <Link className="menu-items" href="#">
+                  <FontAwesomeIcon className="" icon={faUser} size="lg" />
                 </Link>
               </li>
             </ul>
