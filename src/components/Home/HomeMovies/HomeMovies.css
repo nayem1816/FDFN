@@ -1,0 +1,32 @@
+.movie-image {
+  height: 550px;
+  width: 100%;
+}
+.movie-slider .swiper-button-next {
+  background-color: rgba(0, 0, 0, 0.452);
+  padding: 25px;
+  border-radius: 100%;
+  color: white;
+}
+.movie-slider .swiper-button-next:hover {
+  background-color: red;
+}
+.movie-slider .swiper-button-prev {
+  background-color: rgba(0, 0, 0, 0.452);
+  padding: 25px;
+  border-radius: 100%;
+  color: white;
+}
+.movie-slider .swiper-button-prev:hover {
+  background-color: red;
+}
+.movie-link-not-style {
+  color: black;
+  text-decoration: none;
+}
+.movie-name {
+}
+.movie-release-year {
+}
+.movie-rating {
+}

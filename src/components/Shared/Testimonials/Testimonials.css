@@ -1,0 +1,32 @@
+.our-testimonial-title {
+  font-family: "Dancing Script", cursive;
+  color: red;
+  font-weight: bold;
+}
+.our-testimonial-sub-title {
+  font-weight: bold;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.testimonial-profile {
+  padding: 70px 10px 10px;
+  background-color: #f7f7f7;
+}
+.testimonial-profile:hover {
+  color: white;
+  background: #a03a24;
+  background: -webkit-linear-gradient(top left, #a03a24, #e8337b);
+  background: -moz-linear-gradient(top left, #a03a24, #e8337b);
+  background: linear-gradient(to bottom right, #a03a24, #e8337b);
+}
+.testimonial-profile img {
+  margin-top: -130px;
+  position: absolute;
+  border: 10px solid #ffff;
+  margin-left: -60px;
+}
+.testimonial-img-style {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}

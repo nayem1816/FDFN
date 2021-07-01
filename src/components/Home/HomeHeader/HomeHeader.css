@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;900&display=swap");
 
+
 .home-header-slider,
 :root {
   --swiper-navigation-size: 30px !important;
@@ -12,12 +13,12 @@
   background-size: cover;
 }
 .slider-bg-style {
-  height: 90vh;
+  height: 850px;
   background-color: rgba(0, 0, 0, 0.685);
 }
 .text-head1 {
   font-size: 100px;
-  color: #d7c26b;
+  color: #05F4B7;
   font-weight: 900;
   padding: 20px;
   font-family: "Mulish", sans-serif;
