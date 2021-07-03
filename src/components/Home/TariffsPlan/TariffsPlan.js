@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import tariffsPlan from "../../../AllData/TariffsData/TariffsData.json";
+import "./TariffsPlan.css";
 
 const TariffsPlan = () => {
   const [dataPlan, setDataPlan] = useState([]);
@@ -10,9 +11,11 @@ const TariffsPlan = () => {
   return (
     <div className="my-5 container">
       <div className="text-center">
-        <p>Tariffs</p>
-        <h2>Choose your plan</h2>
-        <p>
+        <h5 className="font-dancing color-red font-bold tariffs-title-top">
+          Tariffs
+        </h5>
+        <h2 className="font-ubuntu tariffs-title">Choose your plan</h2>
+        <p className="font-open-sans">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
           bibendum, est ac faucibus hendrerit, mauris ante viverra urna, in{" "}
           <br /> elementum urna est ut ligula.

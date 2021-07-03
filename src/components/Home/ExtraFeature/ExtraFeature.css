@@ -1,0 +1,47 @@
+.extra-feature-title {
+  font-size: 45px;
+}
+.extra-feature-sub-title h2 {
+  color: red;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Ubuntu", sans-serif;
+}
+.extra-feature-sub-title h5 {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Ubuntu", sans-serif;
+}
+.extra-btn-style {
+  color: #fff;
+  border: none;
+  margin: 20px 0;
+  padding: 20px 30px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: #ff0000;
+}
+.extra-btn-style:hover {
+  background-color: #ff0000;
+  border: none;
+  color: white;
+}
+
+@media (max-width: 993px) {
+  .extra-feature-sub-title h2 {
+    color: red;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "Ubuntu", sans-serif;
+  }
+  .extra-feature-sub-title h5 {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Ubuntu", sans-serif;
+  }
+}

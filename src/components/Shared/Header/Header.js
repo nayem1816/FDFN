@@ -45,11 +45,6 @@ const Header = () => {
               </li>
               <li>
                 <Link className="menu-items" href="#">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link className="menu-items" href="#">
                   Services
                 </Link>
               </li>

@@ -1,16 +1,25 @@
+/* font-family: 'Dancing Script', cursive;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Ubuntu', sans-serif; */
 
-
-
-
-
-
-
-
-
-
-
-
-
+.font-dancing {
+  font-family: "Dancing Script", cursive;
+}
+.font-open-sans {
+  font-family: "Open Sans", sans-serif;
+}
+.font-ubuntu {
+  font-family: "Ubuntu", sans-serif;
+}
+.color-red {
+  color: red;
+}
+.color-sky{
+    color: #48c0bf;
+}
+.font-bold{
+    font-weight: bold;
+}
 
 /* @media screen and (max-width: 320px) and (min-width: 480px) {
   

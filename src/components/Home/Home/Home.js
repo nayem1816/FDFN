@@ -1,10 +1,12 @@
 import React from "react";
+import Footer from "../../Shared/Footer/Footer";
 import Testimonials from "../../Shared/Testimonials/Testimonials";
 import ExtraFeature from "../ExtraFeature/ExtraFeature";
 import HomeFeature from "../HomeFeature/HomeFeature";
 import HomeHeader from "../HomeHeader/HomeHeader";
 import HomeHeaderFeature from "../HomeHeaderFeature/HomeHeaderFeature";
 import HomeMovies from "../HomeMovies/HomeMovies";
+import OnlineStore from "../OnlineStore/OnlineStore";
 import TariffsPlan from "../TariffsPlan/TariffsPlan";
 
 const Home = () => {
@@ -17,6 +19,8 @@ const Home = () => {
       <TariffsPlan />
       <Testimonials />
       <HomeMovies />
+      <OnlineStore />
+      <Footer />
     </div>
   );
 };

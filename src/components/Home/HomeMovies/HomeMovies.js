@@ -54,16 +54,21 @@ const HomeMovies = () => {
         >
           {tenMovies.map((movie) => (
             <SwiperSlide className="d-flex justify-content-center">
-              <Link className='movie-link-not-style' to="">
+              <div className="movie-link-not-style">
                 <div className="">
-                  <img
-                    className="img-fluid movie-image"
-                    src={movie.movieImg}
-                    alt=""
-                  />
-                  <h4 className="text-start movie-name movie-link-not-style">
+                  <Link to="">
+                    <img
+                      className="img-fluid movie-image"
+                      src={movie.movieImg}
+                      alt=""
+                    />
+                  </Link>
+                  <Link
+                    to=""
+                    className="text-start movie-name movie-link-not-style"
+                  >
                     {movie.movieName}
-                  </h4>
+                  </Link>
                   <div className="d-flex justify-content-between">
                     <p className="movie-release-year movie-link-not-style">
                       {movie.releaseYear}
@@ -74,7 +79,7 @@ const HomeMovies = () => {
                     </p>
                   </div>
                 </div>
-              </Link>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>

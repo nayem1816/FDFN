@@ -40,9 +40,9 @@ const HomeHeaderFeature = () => {
                   <img className="img-fluid" src={feature.image} alt="" />
                 </div>
                 <div className="col-7 feature-card-description">
-                  <h2>{feature.title}</h2>
-                  <p>{feature.description}</p>
-                  <h5>
+                  <h2 className="">{feature.title}</h2>
+                  <p className="font-open-sans">{feature.description}</p>
+                  <h5 className="color-red">
                     Start from <span>{feature.price}</span>
                   </h5>
                 </div>

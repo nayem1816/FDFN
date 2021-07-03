@@ -70,8 +70,15 @@ const HomeHeader = () => {
                     {sliderImg.description}
                   </p>
                   <div className="button">
-                    <Link to='' className='btn-style btn-style-warning'>Read More</Link>
-                    <Link to='' className='btn-style btn-style-danger'>Start Now</Link>
+                    <Link to="" className="btn-style btn-style-warning">
+                      Read More
+                    </Link>
+                    <Link
+                      to=""
+                      className="btn-style btn-style-danger"
+                    >
+                      Start Now
+                    </Link>
                   </div>
                 </div>
               </div>

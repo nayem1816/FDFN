@@ -1,6 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;900&display=swap");
-
-
 .home-header-slider,
 :root {
   --swiper-navigation-size: 30px !important;
@@ -17,21 +14,21 @@
   background-color: rgba(0, 0, 0, 0.685);
 }
 .text-head1 {
-  font-size: 100px;
-  color: #05F4B7;
+  font-size: 150px;
+  color: #ff0000;
   font-weight: 900;
   padding: 20px;
-  font-family: "Mulish", sans-serif;
+  font-family: "Dancing Script", cursive;
 }
 .text-head2 {
-  font-size: 40px;
-  font-weight: 900;
-  font-family: "Mulish", sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  font-family: "Ubuntu", sans-serif;
 }
 .text-description {
   font-size: 20px;
   padding: 20px;
-  font-family: "Mulish", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .home-header-slider .swiper-button-next {
@@ -41,7 +38,7 @@
   color: white;
 }
 .home-header-slider .swiper-button-next:hover {
-  background-color: red;
+  background-color: #ff0000;
 }
 .home-header-slider .swiper-button-prev {
   background-color: rgba(0, 0, 0, 0.452);
@@ -69,29 +66,30 @@
   text-decoration: none;
 }
 .btn-style-danger {
-  background: #ff7675;
-  box-shadow: 0 0 2px #ff7675;
+  background: #ff0000;
+  box-shadow: 0 0 2px #ff0000;
 }
 
 .btn-style-danger:hover {
-  box-shadow: 0 0 2px #ff7675, 0 0 5px #ff7675, 0 0 5px #ff7675,
-    0 0 100px #ff7675;
+  box-shadow: 0 0 2px #ff0000, 0 0 5px #ff0000, 0 0 5px #ff0000,
+    0 0 100px #ff0000;
+  color: white;
 }
 
 .btn-style-warning {
-  background: #d7c26b;
-  box-shadow: 0 0 2px #d7c26b;
+  background: #48c0bf;
+  box-shadow: 0 0 2px #48c0bf;
 }
 
 .btn-style-warning:hover {
-  box-shadow: 0 0 0px #d7c26b, 0 0 5px #d7c26b, 0 0 5px #d7c26b,
-    0 0 100px #d7c26b;
+  box-shadow: 0 0 0px #48c0bf, 0 0 5px #48c0bf, 0 0 5px #48c0bf,
+    0 0 100px #48c0bf;
+  color: white;
 }
 
 @media (max-width: 1000px) {
   .text-head1 {
     font-size: 60px;
-    color: #d7c26b;
     font-weight: 900;
     padding: 20px;
   }
@@ -107,13 +105,12 @@
 
 @media (max-width: 550px) {
   .text-head1 {
-    font-size: 45px;
-    color: #d7c26b;
+    font-size: 55px;
     font-weight: 900;
     padding: 20px;
   }
   .text-head2 {
-    font-size: 25px;
+    font-size: 23px;
     font-weight: 900;
   }
   .text-description {

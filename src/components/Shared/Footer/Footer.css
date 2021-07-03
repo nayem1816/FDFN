@@ -1,0 +1,12 @@
+.icon-link {
+  color: white;
+  padding: 10px;
+  background-color: red;
+  border-radius: 10px;
+  margin: 10px;
+  font-size: 14px;
+}
+.icon-link:hover {
+  color: red;
+  background-color: black;
+}

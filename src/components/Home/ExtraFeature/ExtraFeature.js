@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "./ExtraFeature.css";
 
 const ExtraFeature = () => {
   return (
@@ -6,27 +8,27 @@ const ExtraFeature = () => {
       <div className="container my-5">
         <div className="row d-flex align-items-center">
           <div className="col-md-6">
-            <h2>
-              <span>Live Sport</span>and TV-shows for best <br />
-              friends
+            <h2 className="font-ubuntu font-bold extra-feature-title mb-4">
+              <span className="color-red">Live Sport </span>and TV-shows for
+              best friends
             </h2>
-            <p>
+            <p className="font-open-sans mb-4">
               Etiam euismod eros in nisl iaculis venenatis. Aenean venenatis
               turpis et gravida interdum. Nulla facilisi. Pellentesque
               imperdiet, sem et commodo interdum, justo velit sagittis metus
               erat sed purus.
             </p>
             <div className="row">
-              <div className="col-md-6 d-flex align-items-center">
+              <div className="col-md-6 d-flex align-items-center extra-feature-sub-title">
                 <h2>4K</h2>
                 <h5 className="ms-2">Ultra HD Quality</h5>
               </div>
-              <div className="col-md-6 d-flex align-items-center">
+              <div className="col-md-6 d-flex align-items-center extra-feature-sub-title">
                 <h2>200+</h2>
                 <h5 className="ms-2">Online Channels</h5>
               </div>
             </div>
-            <button className="btn btn-danger">Read more</button>
+            <Link to='' className="btn extra-btn-style">Read more</Link>
           </div>
           <div className="col-md-6">
             <img
