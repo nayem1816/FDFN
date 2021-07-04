@@ -1,6 +1,25 @@
-.tariffs-title-top{
-    font-size: 30px;
+.tariffs-title-top {
+  font-size: 30px;
 }
-.tariffs-title{
-    font-size: 40px;
+.tariffs-title {
+  font-size: 40px;
+}
+
+.tariffs-button {
+  background-color: red;
+  height: 100%;
+  width: 100%;
+  font-size: 15px;
+}
+.pill-main-navbar {
+  width: 400px;
+}
+.pill-navbar {
+  height: 50px;
+}
+.pill-navbar-item {
+  height: 100%;
+}
+.nav-pills .nav-link.active {
+  background-color: red;
 }
