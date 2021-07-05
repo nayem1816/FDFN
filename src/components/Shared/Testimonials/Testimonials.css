@@ -1,23 +1,20 @@
-.our-testimonial-title {
-  font-family: "Dancing Script", cursive;
-  color: red;
-  font-weight: bold;
+.testimonial-title-top {
+  font-size: 30px;
 }
-.our-testimonial-sub-title {
-  font-weight: bold;
-  font-family: "Ubuntu", sans-serif;
+.testimonial-title {
+  font-size: 40px;
 }
 
 .testimonial-profile {
   padding: 70px 10px 10px;
-  background-color: #f7f7f7;
+  background-color: rgb(255, 252, 248);
 }
 .testimonial-profile:hover {
   color: white;
-  background: #a03a24;
-  background: -webkit-linear-gradient(top left, #a03a24, #e8337b);
-  background: -moz-linear-gradient(top left, #a03a24, #e8337b);
-  background: linear-gradient(to bottom right, #a03a24, #e8337b);
+  background: red;
+  background: -webkit-linear-gradient(top left, red, #e8337b);
+  background: -moz-linear-gradient(top left, red, #e8337b);
+  background: linear-gradient(to bottom right, red, #e8337b);
 }
 .testimonial-profile img {
   margin-top: -130px;

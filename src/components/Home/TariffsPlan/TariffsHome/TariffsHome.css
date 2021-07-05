@@ -1,0 +1,39 @@
+.package-card-top {
+  background-color: black;
+  color: white;
+}
+.package-card-top h4 {
+  letter-spacing: 2px;
+}
+.package-card-price {
+  background-color: rgb(22, 21, 21);
+  color: white;
+}
+.package-card-price h1 {
+  font-size: 50px;
+  letter-spacing: 4px;
+}
+.package-card-feature {
+  background-color: rgb(255, 252, 248);
+}
+.package-card-feature p {
+  border-bottom: 1px solid #ddd;
+}
+.package-card-feature p:last-child {
+  border-bottom: none;
+}
+.package-card-btn {
+  background-color: red;
+  width: 100%;
+  border: none;
+  padding: 10px;
+  color: white;
+  font-size: 25px;
+}
+.package-card-btn a {
+  color: white;
+  font-size: 25px;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+}

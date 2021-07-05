@@ -13,8 +13,10 @@ const Testimonials = () => {
   return (
     <div className="my-5">
       <div className="text-center container">
-        <p className="our-testimonial-title">Testimonial</p>
-        <h2 className="our-testimonial-sub-title">What our clients say</h2>
+        <h5 className="font-dancing color-red font-bold testimonial-title-top">
+          Testimonial
+        </h5>
+        <h2 className="font-ubuntu tariffs-title">What our clients say</h2>
         <div className="row">
           {testimonials.map((testimonial) => (
             <div style={{ margin: "40px auto" }} className="col-md-4 p-3">
@@ -24,13 +26,13 @@ const Testimonials = () => {
                   src={testimonial.img}
                   alt=""
                 />
-                <blockquote className="openSans-text">
+                <blockquote className="font-open-sans">
                   <FontAwesomeIcon icon={faQuoteLeft} />
                   {testimonial.description}
                   <FontAwesomeIcon icon={faQuoteRight} />
                 </blockquote>
-                <h4 className="ubuntu-text">{testimonial.name}</h4>
-                <small className="openSans-text">({testimonial.title})</small>
+                <h4 className="font-ubuntu">{testimonial.name}</h4>
+                <small className="font-open-sans">({testimonial.title})</small>
               </div>
             </div>
           ))}
