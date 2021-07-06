@@ -20,11 +20,13 @@ const HomeMovies = () => {
   }, []);
   const tenMovies = movieData.slice(0, 10);
   return (
-    <div className="my-5">
+    <div className="full-home-movie">
       <div className="text-center">
-        <p>Interesting</p>
-        <h2>Featured Shows</h2>
-        <p>
+        <h5 className="font-dancing color-red font-bold home-title-top">
+          Interesting
+        </h5>
+        <h2 className="font-ubuntu home-title text-white">Featured Shows</h2>
+        <p className="font-open-sans text-white">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
           bibendum, est ac faucibus hendrerit, mauris ante viverra urna, in
           <br /> elementum urna est ut ligula.
@@ -38,12 +40,12 @@ const HomeMovies = () => {
           navigation={true}
           breakpoints={{
             640: {
-              slidesPerView: 1,
-              spaceBetween: 10,
+              slidesPerView: 2,
+              spaceBetween: 20,
             },
             768: {
-              slidesPerView: 4,
-              spaceBetween: 40,
+              slidesPerView: 3,
+              spaceBetween: 30,
             },
             1024: {
               slidesPerView: 5,
@@ -63,13 +65,14 @@ const HomeMovies = () => {
                       alt=""
                     />
                   </Link>
+                  <br />
                   <Link
                     to=""
                     className="text-start movie-name movie-link-not-style"
                   >
                     {movie.movieName}
                   </Link>
-                  <div className="d-flex justify-content-between">
+                  <div className="d-flex justify-content-between pt-2">
                     <p className="movie-release-year movie-link-not-style">
                       {movie.releaseYear}
                     </p>

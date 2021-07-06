@@ -35,14 +35,16 @@ const features = [
 
 const HomeFeature = () => {
   return (
-    <div className="my-5 container">
-      <div className="row">
-        {features.map((feature) => (
-          <div className="col-6 col-md-2 text-center">
-            <img className="img-fluid p-4" src={feature.imgSrc} alt="" />
-            <h6 className='font-ubuntu font-bold'>{feature.name}</h6>
-          </div>
-        ))}
+    <div className="my-5">
+      <div className="container">
+        <div className="row">
+          {features.map((feature) => (
+            <div className="col-6 col-md-2 text-center">
+              <img className="img-fluid p-4" src={feature.imgSrc} alt="" />
+              <h6 className="font-ubuntu font-bold">{feature.name}</h6>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

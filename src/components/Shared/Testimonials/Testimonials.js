@@ -16,13 +16,13 @@ const Testimonials = () => {
         <h5 className="font-dancing color-red font-bold testimonial-title-top">
           Testimonial
         </h5>
-        <h2 className="font-ubuntu tariffs-title">What our clients say</h2>
+        <h2 className="font-ubuntu tariffs-title">Our Founder say</h2>
         <div className="row">
           {testimonials.map((testimonial) => (
             <div style={{ margin: "40px auto" }} className="col-md-4 p-3">
               <div className="testimonial-profile rounded">
                 <img
-                  className="img-fluid testimonial-img-style "
+                  className="img-fluid testimonial-img-style"
                   src={testimonial.img}
                   alt=""
                 />
