@@ -1,7 +1,7 @@
 import {
   faBars,
   faShoppingCart,
-  faUser,
+  faUser
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
@@ -39,32 +39,32 @@ const Header = () => {
             </label>
             <ul className="navbar-style-ul">
               <li>
-                <Link className="menu-items" href="/home">
+                <Link className="menu-items" to="/home">
                   Home
                 </Link>
               </li>
               <li>
-                <Link className="menu-items" href="#">
-                  Services
+                <Link className="menu-items" to="/about">
+                  About
                 </Link>
               </li>
               <li>
-                <Link className="menu-items" href="#">
+                <Link className="menu-items" to="#">
                   Products
                 </Link>
               </li>
               <li>
-                <Link className="menu-items" href="#">
+                <Link className="menu-items" to="/contact">
                   Contact
                 </Link>
               </li>
               <li className="">
-                <Link className="menu-items active" href="#">
+                <Link className="menu-items active" to="#">
                   Form Registration
                 </Link>
               </li>
               <li className="text-center">
-                <Link className="menu-items" href="#">
+                <Link className="menu-items" to="#">
                   <FontAwesomeIcon
                     className=""
                     icon={faShoppingCart}
@@ -72,7 +72,7 @@ const Header = () => {
                   />
                   <span className="">0</span>
                 </Link>
-                <Link className="menu-items" href="#">
+                <Link className="menu-items" to="#">
                   <FontAwesomeIcon className="" icon={faUser} size="lg" />
                 </Link>
               </li>

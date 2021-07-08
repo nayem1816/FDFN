@@ -1,6 +1,5 @@
 .navbar-bg-color {
   background: rgba(0, 0, 0, 0.205) !important;
-  /* z-index: 10000; */
 }
 .navbar-bg-color.active {
   background: rgb(0, 0, 0) !important;
@@ -39,15 +38,15 @@ nav {
   border-radius: 5px;
   letter-spacing: 1px;
   transition: all 0.3s ease;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 .navbar-style-ul li .menu-items:hover {
   color: #ffff;
-  background: #FF0000;
+  background: #ff0000;
 }
 .menu-items.active {
   color: #ffff;
-  background: #FF0000;
+  background: #ff0000;
 }
 .mobile-menu-icon {
   color: #fff;
