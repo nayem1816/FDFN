@@ -5,6 +5,7 @@ import Home from "./components/Home/Home/Home";
 import Header from "./components/Shared/Header/Header";
 import About from "./components/About/About/About";
 import Contact from "./components/Contact/Contact/Contact";
+import RegisterForm from "./components/RegisterForm/RegisterForm";
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
             </Route>
             <Route path="/contact">
               <Contact />
+            </Route>
+            <Route path="/registration">
+              <RegisterForm />
             </Route>
             <Route path="*">
               <NotFound />

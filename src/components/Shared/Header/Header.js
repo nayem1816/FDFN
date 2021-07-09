@@ -59,7 +59,7 @@ const Header = () => {
                 </Link>
               </li>
               <li className="">
-                <Link className="menu-items active" to="#">
+                <Link className="menu-items active" to="/registration">
                   Form Registration
                 </Link>
               </li>

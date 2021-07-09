@@ -1,0 +1,11 @@
+.register-form-top {
+  background-image: url("https://i.ibb.co/bdWn5XP/manish-upadhyay-VNgbq-J-q-Ajc-unsplash-1-1.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 450px;
+}
+.register-form-bg {
+  background-color: rgba(0, 0, 0, 0.589);
+  height: 450px;
+}
