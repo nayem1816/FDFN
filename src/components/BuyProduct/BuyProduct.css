@@ -1,0 +1,35 @@
+.buy-product-header {
+  background-image: url("https://i.ibb.co/bdWn5XP/manish-upadhyay-VNgbq-J-q-Ajc-unsplash-1-1.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 450px;
+}
+.buy-product-header-bg {
+  background-color: rgba(0, 0, 0, 0.589);
+  height: 450px;
+}
+.buy-product-header-bg h2 {
+  font-size: 100px;
+}
+.product-increment button {
+  width: 40px;
+  height: 30px;
+  margin-right: 10px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 10px;
+}
+.minus {
+}
+.plus {
+}
+.product-number {
+  width: 70px !important;
+}
+
+@media (max-width: 685px) {
+  .buy-product-header-bg h2 {
+    font-size: 50px;
+  }
+}

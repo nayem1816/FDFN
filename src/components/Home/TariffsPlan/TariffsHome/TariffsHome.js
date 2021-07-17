@@ -1,6 +1,8 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react";
 import tariffsPlan from "../../../../AllData/TariffsData/TariffsData.json";
 import "./TariffsHome.css";
+import TariffsHomeModal from './TariffsHomeModal';
 
 const TariffsHome = () => {
   const [dataPlan, setDataPlan] = useState([]);
@@ -31,9 +33,10 @@ const TariffsHome = () => {
                 <p className="font-open-sans">{data.feature4}</p>
               </div>
               <div className="package-card-btn rounded-bottom font-ubuntu">
-                <a href="tel:+8801841181011" className="">
-                  Contact Us
+                <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" href="" className="">
+                  Book Now
                 </a>
+                <TariffsHomeModal />
               </div>
             </div>
           </div>

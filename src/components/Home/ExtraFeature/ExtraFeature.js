@@ -1,5 +1,6 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
-import { Link } from "react-router-dom";
+import { animateScroll as scroll, Link } from "react-scroll";
 import "./ExtraFeature.css";
 
 const ExtraFeature = () => {
@@ -28,7 +29,9 @@ const ExtraFeature = () => {
                 <h5 className="ms-2">Online Channels</h5>
               </div>
             </div>
-            <Link to='' className="btn extra-btn-style">Read more</Link>
+            <Link to="interesting"
+              smooth={true}
+              duration={300} className="btn extra-btn-style">Read more</Link>
           </div>
           <div className="col-md-6">
             <img

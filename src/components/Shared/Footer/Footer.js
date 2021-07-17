@@ -67,7 +67,11 @@ const Footer = () => {
             <div className="col-md-6 text-center text-md-end">
               <small className="">
                 Developed by{" "}
-                <Link className="footer-bottom" to="">
+                <Link
+                  className="footer-bottom"
+                  to={{ pathname: "https://nayem-portfolio.web.app/" }}
+                  target="_blank"
+                >
                   Md Nayeem Hossain
                 </Link>
               </small>

@@ -61,7 +61,10 @@ const OnlineStore = () => {
                     alt=""
                   />
                 </Link>
-                <Link className="product-name font-ubuntu" to="">
+                <Link
+                  className="product-name font-ubuntu"
+                  to={`/product/${product.id}`}
+                >
                   <h5>{product.productName.slice(0, 30)}...</h5>
                 </Link>
                 <p className="font-open-sans">{product.description}</p>
@@ -71,9 +74,12 @@ const OnlineStore = () => {
                     {product.price}
                   </span>
                 </h5>
-                <Link to="" className="online-store-cart-btn font-ubuntu">
+                <Link
+                  to={`/buyProducts/${product.id}`}
+                  className="online-store-cart-btn font-ubuntu"
+                >
                   <FontAwesomeIcon className="me-1" icon={faCartPlus} />
-                  Add to cart
+                  Buy Now
                 </Link>
               </div>
             </SwiperSlide>

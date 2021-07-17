@@ -20,7 +20,7 @@ const HomeMovies = () => {
   }, []);
   const tenMovies = movieData.slice(0, 10);
   return (
-    <div className="full-home-movie">
+    <div id='interesting' className="full-home-movie">
       <div className="text-center">
         <h5 className="font-dancing color-red font-bold home-title-top">
           Interesting
@@ -58,7 +58,7 @@ const HomeMovies = () => {
             <SwiperSlide className="d-flex justify-content-center">
               <div className="movie-link-not-style">
                 <div className="">
-                  <Link to="">
+                  <Link to={`/movies/${movie.id}`}>
                     <img
                       className="img-fluid movie-image"
                       src={movie.movieImg}
@@ -67,7 +67,7 @@ const HomeMovies = () => {
                   </Link>
                   <br />
                   <Link
-                    to=""
+                    to={`/movies/${movie.id}`}
                     className="text-start movie-name movie-link-not-style"
                   >
                     {movie.movieName}

@@ -1,6 +1,5 @@
 import {
   faBars,
-  faShoppingCart,
   faUser
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -49,13 +48,13 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link className="menu-items" to="#">
-                  Products
+                <Link className="menu-items" to="/contact">
+                  Contact
                 </Link>
               </li>
               <li>
-                <Link className="menu-items" to="/contact">
-                  Contact
+                <Link className="menu-items" to="/">
+                  Dashboard
                 </Link>
               </li>
               <li className="">
@@ -64,15 +63,7 @@ const Header = () => {
                 </Link>
               </li>
               <li className="text-center">
-                <Link className="menu-items" to="#">
-                  <FontAwesomeIcon
-                    className=""
-                    icon={faShoppingCart}
-                    size="lg"
-                  />
-                  <span className="">0</span>
-                </Link>
-                <Link className="menu-items" to="#">
+                <Link className="menu-items" to="login">
                   <FontAwesomeIcon className="" icon={faUser} size="lg" />
                 </Link>
               </li>

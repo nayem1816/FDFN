@@ -6,7 +6,10 @@ import './RegisterForm.css';
 
 const RegisterForm = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = (data) => {
+        console.log(data);
+        alert('Thank You! for your Registration form');
+    };
     return (
         <div>
             <div className="text-center register-form-top">
@@ -102,6 +105,24 @@ const RegisterForm = () => {
                         <label for="mothersName" className="col-sm-2 col-form-label">Mother's Name</label>
                         <div className="col-sm-10">
                             <input type="text" className="form-control" id="mothersName" {...register("mothersName")} placeholder='Mother Name' />
+                        </div>
+                    </div>
+                    <div className="row p-2">
+                        <label for="yourPhoto" className="col-sm-2 col-form-label">Your Photo</label>
+                        <div className="col-sm-10">
+                            <input type="file" className="form-control" id="yourPhoto" {...register("yourPhoto")} placeholder='Your Photo' />
+                        </div>
+                    </div>
+                    <div className="row p-2">
+                        <label for="nidFrontPhoto" className="col-sm-2 col-form-label">NID Front Page</label>
+                        <div className="col-sm-10">
+                            <input type="file" className="form-control" id="nidFrontPhoto" {...register("nidFrontPhoto")} placeholder='NID Front Photo' />
+                        </div>
+                    </div>
+                    <div className="row p-2">
+                        <label for="nidBackPhoto" className="col-sm-2 col-form-label">NID Back Page</label>
+                        <div className="col-sm-10">
+                            <input type="file" className="form-control" id="nidBackPhoto" {...register("nidBackPhoto")} placeholder='NID Back Photo' />
                         </div>
                     </div>
                     <div className="text-center">

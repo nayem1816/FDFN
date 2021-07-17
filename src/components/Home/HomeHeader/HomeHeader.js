@@ -6,6 +6,8 @@ import "swiper/components/navigation/navigation.min.css";
 
 import SwiperCore, { Autoplay, Navigation } from "swiper/core";
 import { Link } from "react-router-dom";
+import StartNowBtn from "./StartNowBtn";
+
 SwiperCore.use([Autoplay, Navigation]);
 
 const sliderImage = [
@@ -44,7 +46,7 @@ const sliderImage = [
   },
 ];
 
-const HomeHeader = () => {
+const HomeHeader = ({ passInteresting }) => {
   return (
     <div className="home-header-style">
       <Swiper
@@ -70,15 +72,10 @@ const HomeHeader = () => {
                     {sliderImg.description}
                   </p>
                   <div className="button">
-                    <Link to="" className="btn-style btn-style-warning">
+                    <Link to="/about" className="btn-style btn-style-warning">
                       Read More
                     </Link>
-                    <Link
-                      to=""
-                      className="btn-style btn-style-danger"
-                    >
-                      Start Now
-                    </Link>
+                    <StartNowBtn />
                   </div>
                 </div>
               </div>
