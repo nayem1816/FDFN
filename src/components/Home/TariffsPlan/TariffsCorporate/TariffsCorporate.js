@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react";
 import tariffsPlan from "../../../../AllData/TariffsData/TariffsData.json";
-import TariffsCorporateModal from './TariffsCorporateModal';
+import TariffsCorporateModal from "./TariffsCorporateModal";
 
 const TariffsCorporate = () => {
   const [dataPlan, setDataPlan] = useState([]);
@@ -32,7 +32,13 @@ const TariffsCorporate = () => {
                 <p className="font-open-sans">{data.feature4}</p>
               </div>
               <div className="package-card-btn rounded-bottom font-ubuntu">
-                <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal3" href='' className="">
+                <a
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal3"
+                  href=""
+                  className=""
+                >
                   Book Now
                 </a>
                 <TariffsCorporateModal />

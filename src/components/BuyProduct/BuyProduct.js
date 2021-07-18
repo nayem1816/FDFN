@@ -5,6 +5,7 @@ import productData from "../../AllData/OnlineStore/OnlineStore.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import PaymentProcess from "./PaymentProcess/PaymentProcess";
+import Footer from "./../Shared/Footer/Footer";
 
 const BuyProduct = () => {
   const { id } = useParams();
@@ -26,14 +27,6 @@ const BuyProduct = () => {
   const pdPrice = singleProduct?.price;
 
   const newPrice = pdCount * pdPrice;
-
-  // const [increasePrice, setIncreasePrice] = useState(pdPrice);
-
-  // useEffect(() => {
-  //   setIncreasePrice(increasePrice * pdCount);
-  // }, []);
-
-  console.log(newPrice);
   return (
     <div>
       <div className="buy-product-header">
@@ -45,7 +38,7 @@ const BuyProduct = () => {
           </div>
         </div>
         <div className="container buy-product my-5">
-          <div className="row">
+          <div className="row d-flex align-items-center">
             <div className="col-md-8">
               <div className="row d-flex justify-content-center align-items-center">
                 <div className="col-5">
@@ -87,10 +80,16 @@ const BuyProduct = () => {
             </div>
             <div className="col-md-4">
               <div className="pay-money">
-                <PaymentProcess />
+                <PaymentProcess
+                  singleProduct={singleProduct}
+                  newPrice={newPrice}
+                />
               </div>
             </div>
           </div>
+        </div>
+        <div className="footer">
+          <Footer />
         </div>
       </div>
     </div>

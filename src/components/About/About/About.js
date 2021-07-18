@@ -5,14 +5,14 @@ import AboutHeader from "../AboutHeader/AboutHeader";
 import Discover from "../Discover/Discover";
 
 const About = () => {
-    return (
-        <div>
-            <AboutHeader />
-            <Discover />
-            <Testimonials />
-            <Footer />
-        </div>
-    );
+  return (
+    <div>
+      <AboutHeader />
+      <Discover />
+      <Testimonials />
+      <Footer />
+    </div>
+  );
 };
 
 export default About;
