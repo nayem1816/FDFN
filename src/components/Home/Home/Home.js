@@ -1,5 +1,6 @@
 import React from "react";
 import Footer from "../../Shared/Footer/Footer";
+import Header from "../../Shared/Header/Header";
 import Testimonials from "../../Shared/Testimonials/Testimonials";
 import ExtraFeature from "../ExtraFeature/ExtraFeature";
 import HomeFeature from "../HomeFeature/HomeFeature";
@@ -12,6 +13,7 @@ import TariffsPlan from "../TariffsPlan/TariffsPlan";
 const Home = () => {
   return (
     <div>
+      <Header />
       <HomeHeader />
       <HomeHeaderFeature />
       <ExtraFeature />

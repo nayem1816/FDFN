@@ -1,5 +1,5 @@
 .login-page-style {
-  height: 100vh;
+  height: 1000px;
   background-image: url("https://i.ibb.co/4j31SqW/nasa-1lf-I7wk-GWZ4-unsplash-1.jpg");
 }
 .main_div {
@@ -65,7 +65,7 @@ form .input_box {
   outline: none;
   border: 1px solid lightgrey;
   border-radius: 5px;
-  padding-left: 10px;
+  padding-left: 50px;
   font-size: 17px;
   transition: all 0.3s ease;
 }

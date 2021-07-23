@@ -1,0 +1,16 @@
+.dashboard-sidebar {
+  height: 100vh;
+}
+.dashboard-sidebar ul {
+  padding: 0;
+  margin-left: 20px;
+}
+.dashboard-sidebar ul li {
+  list-style-type: none;
+  padding: 20px 0px;
+}
+.dashboard-navigation {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+}

@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import PaymentProcess from "./PaymentProcess/PaymentProcess";
 import Footer from "./../Shared/Footer/Footer";
+import Header from "../Shared/Header/Header";
 
 const BuyProduct = () => {
   const { id } = useParams();
@@ -29,6 +30,7 @@ const BuyProduct = () => {
   const newPrice = pdCount * pdPrice;
   return (
     <div>
+      <Header />
       <div className="buy-product-header">
         <div className="buy-product-header-bg d-flex justify-content-center align-items-center">
           <div className="text-center w-50 mt-5">
@@ -83,6 +85,7 @@ const BuyProduct = () => {
                 <PaymentProcess
                   singleProduct={singleProduct}
                   newPrice={newPrice}
+                  pdCount={pdCount}
                 />
               </div>
             </div>

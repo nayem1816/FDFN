@@ -1,0 +1,11 @@
+.checkout-process h4 {
+  font-size: 18px;
+}
+.checkout-process input {
+  /* border-top: 0;
+  border-right: 0;
+  border-left: 0; */
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
+}

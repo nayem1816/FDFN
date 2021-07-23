@@ -4,6 +4,7 @@ import storesData from "../../../../AllData/OnlineStore/OnlineStore.json";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import "./OnlineStoreDetails.css";
+import Header from "../../../Shared/Header/Header";
 
 const OnlineStoreDetails = () => {
   const [storeData, setStoreData] = useState([]);
@@ -17,6 +18,7 @@ const OnlineStoreDetails = () => {
   console.log(singleStore);
   return (
     <div className="">
+      <Header />
       <div className="store-details-header">
         <div className="store-details-header-bg d-flex justify-content-center align-items-center">
           <div className="text-center w-50 mt-5">

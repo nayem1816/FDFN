@@ -1,7 +1,4 @@
-import {
-  faBars,
-  faUser
-} from "@fortawesome/free-solid-svg-icons";
+import { faBars, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
@@ -53,7 +50,7 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link className="menu-items" to="/">
+                <Link className="menu-items" to="/dashboard">
                   Dashboard
                 </Link>
               </li>
