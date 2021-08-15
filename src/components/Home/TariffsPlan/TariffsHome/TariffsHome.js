@@ -5,7 +5,6 @@ import TariffsHomeModal from "./TariffsHomeModal";
 
 const TariffsHome = () => {
     const [dataPlan, setDataPlan] = useState([]);
-    // console.log(dataPlan);
     const homePackages = dataPlan.filter(
         (homePackage) => homePackage.packageType === "home"
     );

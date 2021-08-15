@@ -4,7 +4,6 @@ import TariffsLocalModal from "./TariffsLocalModal";
 
 const TariffsLocal = () => {
     const [dataPlan, setDataPlan] = useState([]);
-    // console.log(dataPlan);
     const localPackages = dataPlan.filter(
         (homePackage) => homePackage.packageType === "locally"
     );

@@ -34,7 +34,6 @@ const BuyProduct = () => {
     const pdPrice = parseInt(singleProduct?.productPrice);
 
     const newPrice = parseInt(pdCount * pdPrice);
-    // console.log(newPrice);
     return (
         <div>
             <Header />

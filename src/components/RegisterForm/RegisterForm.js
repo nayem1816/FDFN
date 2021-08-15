@@ -18,7 +18,6 @@ const RegisterForm = () => {
     const [nidBackImageUrl, setNidBackImageUrl] = useState({});
 
     const handleUploadImageUser = (event) => {
-        console.log(event.target.files[0]);
         const imgData = new FormData();
         imgData.set("key", "94e8e908997cb2f7fead68d619169951");
         imgData.append("image", event.target.files[0]);
@@ -33,7 +32,6 @@ const RegisterForm = () => {
             });
     };
     const handleUploadImageNidFront = (event) => {
-        console.log(event.target.files[0]);
         const imgData = new FormData();
         imgData.set("key", "94e8e908997cb2f7fead68d619169951");
         imgData.append("image", event.target.files[0]);
@@ -48,7 +46,6 @@ const RegisterForm = () => {
             });
     };
     const handleUploadImageNidBack = (event) => {
-        console.log(event.target.files[0]);
         const imgData = new FormData();
         imgData.set("key", "94e8e908997cb2f7fead68d619169951");
         imgData.append("image", event.target.files[0]);

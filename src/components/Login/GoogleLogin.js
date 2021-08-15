@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
@@ -23,7 +23,6 @@ const GoogleLogin = () => {
     });
     let history = useHistory();
     let location = useLocation();
-    const auth = firebase.auth();
 
     // const storeAuthToken = () => {
     //     firebase

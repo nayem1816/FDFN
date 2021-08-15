@@ -14,8 +14,6 @@ const MyOrder = () => {
             .then((data) => setOrderList(data));
     }, [loggedInUser.email]);
 
-    console.log(loggedInUser.email);
-
     return (
         <div>
             <Header />

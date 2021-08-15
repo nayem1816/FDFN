@@ -10,7 +10,6 @@ import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from "./firebase.config";
 import { userContext } from "./../../App";
-import Header from "../Shared/Header/Header";
 
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);

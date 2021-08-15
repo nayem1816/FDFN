@@ -14,7 +14,6 @@ const MakeAdmin = () => {
         })
             .then((res) => res.json)
             .then((data) => {
-                console.log(data);
                 alert("Thank you, for new Admin");
                 reset();
             });

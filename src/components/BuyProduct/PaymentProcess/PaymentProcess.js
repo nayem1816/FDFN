@@ -24,8 +24,6 @@ const PaymentProcess = ({ singleProduct, pdCount, newPrice }) => {
             orderTime,
             orderStatus,
         };
-
-        console.log(buyProducts);
         fetch("https://hidden-everglades-14055.herokuapp.com/buyProducts", {
             method: "POST",
             headers: { "Content-type": "application/json" },
@@ -33,7 +31,6 @@ const PaymentProcess = ({ singleProduct, pdCount, newPrice }) => {
         })
             .then((res) => res.json)
             .then((data) => {
-                console.log(data);
                 alert("Product Buy Successfully", history.push("/myOrder"));
             });
     };

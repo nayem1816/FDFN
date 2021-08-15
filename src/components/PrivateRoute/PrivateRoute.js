@@ -5,9 +5,6 @@ import { userContext } from "./../../App";
 const PrivateRoute = ({ children, ...rest }) => {
     const [loggedInUser] = useContext(userContext);
 
-    // const token = sessionStorage?.getItem("userEmail");
-    console.log(loggedInUser.email);
-
     return (
         <Route
             {...rest}

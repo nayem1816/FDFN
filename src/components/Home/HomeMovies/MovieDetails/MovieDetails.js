@@ -20,7 +20,6 @@ const MovieDetails = () => {
     const singleMovie = movieData.find(
         (movie) => parseInt(movie._id) === parseInt(id)
     );
-    console.log(singleMovie);
     return (
         <div>
             <Header />

@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import { Link, useHistory, useLocation } from "react-router-dom";
-import Header from "../Shared/Header/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAt, faLock, faUserTie } from "@fortawesome/free-solid-svg-icons";
 import { useForm } from "react-hook-form";

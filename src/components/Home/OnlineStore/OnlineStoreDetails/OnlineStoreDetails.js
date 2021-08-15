@@ -18,7 +18,6 @@ const OnlineStoreDetails = () => {
     const singleStore = storeData.find(
         (store) => parseInt(store._id) === parseInt(id)
     );
-    console.log(singleStore);
     return (
         <div className="">
             <Header />

@@ -4,7 +4,6 @@ import TariffsCorporateModal from "./TariffsCorporateModal";
 
 const TariffsCorporate = () => {
     const [dataPlan, setDataPlan] = useState([]);
-    // console.log(dataPlan);
     const corporatePackages = dataPlan.filter(
         (homePackage) => homePackage.packageType === "corporate"
     );

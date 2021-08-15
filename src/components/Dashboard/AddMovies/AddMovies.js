@@ -9,7 +9,6 @@ const AddMovies = () => {
     const [movieShow, setMovieShow] = useState();
 
     const handleUploadImage = (event) => {
-        console.log(event.target.files[0]);
         const imgData = new FormData();
         imgData.set("key", "94e8e908997cb2f7fead68d619169951");
         imgData.append("image", event.target.files[0]);
@@ -26,7 +25,6 @@ const AddMovies = () => {
 
     const onSubmit = (data) => {
         const moviesData = { ...data, imageUrl };
-        console.log(moviesData);
 
         fetch("https://hidden-everglades-14055.herokuapp.com/allMovies", {
             method: "POST",
