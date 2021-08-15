@@ -1,62 +1,62 @@
 .menu-btn {
-  display: none;
+    display: none;
 }
 .cros-btn {
-  display: none;
+    display: none;
 }
 .dashboard {
-  display: flex;
+    display: flex;
 }
 .dashboard-title {
-  display: block;
+    display: block;
 }
 .dashboard-title-link {
-  text-decoration: none;
-  color: #fff;
-  z-index: 1000;
+    text-decoration: none;
+    color: #fff;
+    z-index: 1000;
 }
 .toggle-icon {
-  font-size: 30px;
-  border-radius: 3px;
-  color: #fff;
-  cursor: pointer;
+    font-size: 30px;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
 }
 .svg-inline--fa.fa-w-11 {
-  width: 13.6875em;
+    width: 13.6875em;
 }
 .sidebar {
-  background-color: #060b26;
-  width: 250px;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  transition: 850ms;
+    background-color: #060b26;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    transition: 850ms;
 }
 .sidebar.active {
-  left: 0;
-  transition: 350ms;
+    left: 0;
+    transition: 350ms;
 }
 .main-dashboard {
-  margin-left: 250px;
-  width: 100%;
+    margin-left: 250px;
+    width: 100%;
 }
 
 @media (max-width: 1000px) {
-  .menu-btn {
-    display: block;
-  }
-  .cros-btn {
-    display: block;
-  }
-  .main-dashboard {
-    margin-left: 0px;
-    transition: 350ms;
-  }
-  .dashboard-title {
-    display: none;
-  }
-  .sidebar {
-    left: -100%;
-    transition: 850ms;
-  }
+    .menu-btn {
+        display: block;
+    }
+    .cros-btn {
+        display: block;
+    }
+    .main-dashboard {
+        margin-left: 0px;
+        transition: 350ms;
+    }
+    .dashboard-title {
+        display: none;
+    }
+    .sidebar {
+        left: -100%;
+        transition: 850ms;
+    }
 }

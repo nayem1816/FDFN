@@ -2,28 +2,32 @@
 font-family: 'Open Sans', sans-serif;
 font-family: 'Ubuntu', sans-serif; */
 
+body {
+    font-family: "Ubuntu", sans-serif;
+}
+
 .font-dancing {
-  font-family: "Dancing Script", cursive;
+    font-family: "Dancing Script", cursive;
 }
 
 .font-open-sans {
-  font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 .font-ubuntu {
-  font-family: "Ubuntu", sans-serif;
+    font-family: "Ubuntu", sans-serif;
 }
 
 .color-red {
-  color: red;
+    color: red;
 }
 
 .color-sky {
-  color: #48c0bf;
+    color: #48c0bf;
 }
 
 .font-bold {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 textarea:hover,
@@ -38,9 +42,9 @@ button:hover,
 label:focus,
 .btn:active,
 .btn.active {
-  outline: 0px !important;
-  -webkit-appearance: none;
-  box-shadow: none !important;
+    outline: 0px !important;
+    -webkit-appearance: none;
+    box-shadow: none !important;
 }
 
 /* @media screen and (max-width: 320px) and (min-width: 480px) {

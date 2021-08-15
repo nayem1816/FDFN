@@ -57,6 +57,16 @@ nav {
 input[type="checkbox"] {
   display: none;
 }
+.user-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* .user-icon-style {
+  font-size: 30px;
+} */
 @media (max-width: 1000px) {
   nav {
     padding: 0 40px 0 50px;

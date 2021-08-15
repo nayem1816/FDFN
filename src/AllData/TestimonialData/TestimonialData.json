@@ -1,23 +1,23 @@
 [
-  {
-    "id": 1,
-    "name": "AR Tipu Kawsar",
-    "title": "CEO/Founder at FDFN",
-    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBIGzoY6ijDO_hxnMeSe4KBlKg4jccyN7obg&usqp=CAU",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quo, fugiat quia molestiae expedita molestias, officia animi necessitatibus, non ratione at incidunt voluptatem. Minima ipsum inventore quia dolorem numquam, id a corrupti nesciunt. Voluptatibus minima excepturi minus quibusdam sed similique."
-  },
-  {
-    "id": 2,
-    "name": "AR Tipu Kawsar",
-    "title": "CEO/Founder at FDFN",
-    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBIGzoY6ijDO_hxnMeSe4KBlKg4jccyN7obg&usqp=CAU",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quo, fugiat quia molestiae expedita molestias, officia animi necessitatibus, non ratione at incidunt voluptatem. Minima ipsum inventore quia dolorem numquam, id a corrupti nesciunt. Voluptatibus minima excepturi minus quibusdam sed similique."
-  },
-  {
-    "id": 3,
-    "name": "AR Tipu Kawsar",
-    "title": "Co-Founder at FDFN",
-    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBIGzoY6ijDO_hxnMeSe4KBlKg4jccyN7obg&usqp=CAU",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quo, fugiat quia molestiae expedita molestias, officia animi necessitatibus, non ratione at incidunt voluptatem. Minima ipsum inventore quia dolorem numquam, id a corrupti nesciunt. Voluptatibus minima excepturi minus quibusdam sed similique."
-  }
+    {
+        "id": 1,
+        "name": "AR Tipu Kawsar",
+        "title": "CEO/Founder at FDFN",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBIGzoY6ijDO_hxnMeSe4KBlKg4jccyN7obg&usqp=CAU",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quo, fugiat quia molestiae expedita molestias, officia animi necessitatibus, non ratione at incidunt voluptatem. Minima ipsum inventore quia dolorem numquam, id a corrupti nesciunt. Voluptatibus minima excepturi minus quibusdam sed similique."
+    },
+    {
+        "id": 2,
+        "name": "AR Tipu Kawsar",
+        "title": "CEO/Founder at FDFN",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBIGzoY6ijDO_hxnMeSe4KBlKg4jccyN7obg&usqp=CAU",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quo, fugiat quia molestiae expedita molestias, officia animi necessitatibus, non ratione at incidunt voluptatem. Minima ipsum inventore quia dolorem numquam, id a corrupti nesciunt. Voluptatibus minima excepturi minus quibusdam sed similique."
+    },
+    {
+        "id": 3,
+        "name": "AR Tipu Kawsar",
+        "title": "Co-Founder at FDFN",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBIGzoY6ijDO_hxnMeSe4KBlKg4jccyN7obg&usqp=CAU",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quo, fugiat quia molestiae expedita molestias, officia animi necessitatibus, non ratione at incidunt voluptatem. Minima ipsum inventore quia dolorem numquam, id a corrupti nesciunt. Voluptatibus minima excepturi minus quibusdam sed similique."
+    }
 ]

@@ -12,55 +12,84 @@ import OnlineStoreDetails from "./components/Home/OnlineStore/OnlineStoreDetails
 import BuyProduct from "./components/BuyProduct/BuyProduct";
 import FbMessenger from "./components/FbMessenger/FbMessenger";
 import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
+import { createContext, useEffect, useState } from "react";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import MyOrder from "./components/MyOrder/MyOrder";
+import firebase from "firebase/app";
+import "firebase/auth";
+export const userContext = createContext({});
 
 function App() {
-  return (
-    <div className="App">
-      <Router>
-        <div>
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/home">
-              <Home />
-            </Route>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/contact">
-              <Contact />
-            </Route>
-            <Route path="/movies/:id">
-              <MovieDetails />
-            </Route>
-            <Route path="/product/:id">
-              <OnlineStoreDetails />
-            </Route>
-            <Route path="/buyProducts/:id">
-              <BuyProduct />
-            </Route>
-            <Route path="/dashboard">
-              <Dashboard />
-            </Route>
-            <Route path="/registration">
-              <RegisterForm />
-            </Route>
-            <Route path="/login">
-              <Login />
-            </Route>
-            <Route path="/signup">
-              <Signup />
-            </Route>
-            <Route path="*">
-              <NotFound />
-            </Route>
-          </Switch>
-        </div>
-        <FbMessenger />
-      </Router>
-    </div>
-  );
+    const [loggedInUser, setLoggedInUser] = useState({});
+
+    const auth = firebase.auth();
+
+    useEffect(() => {
+        auth.onAuthStateChanged((user) => {
+            const { displayName, email, photoURL } = user;
+            const userInfo = {
+                name: displayName,
+                email,
+                photo: photoURL,
+            };
+            setLoggedInUser(userInfo);
+            // console.log(user);
+        });
+    }, []);
+
+    console.log(loggedInUser);
+
+    return (
+        <userContext.Provider value={[loggedInUser, setLoggedInUser]}>
+            <div className="App">
+                <Router>
+                    <Switch>
+                        <Route exact path="/">
+                            <Home />
+                        </Route>
+                        <Route path="/home">
+                            <Home />
+                        </Route>
+                        <Route path="/login">
+                            <Login />
+                        </Route>
+                        <Route path="/signup">
+                            <Signup />
+                        </Route>
+                        <Route path="/about">
+                            <About />
+                        </Route>
+                        <Route path="/contact">
+                            <Contact />
+                        </Route>
+                        <Route path="/movies/:id">
+                            <MovieDetails />
+                        </Route>
+                        <Route path="/product/:id">
+                            <OnlineStoreDetails />
+                        </Route>
+                        <PrivateRoute path="/buyProducts/:id">
+                            <BuyProduct />
+                        </PrivateRoute>
+                        <Route path="/dashboard">
+                            <Dashboard />
+                        </Route>
+                        <Route path="/registration">
+                            <RegisterForm />
+                        </Route>
+                        <Route path="/myOrder">
+                            <MyOrder />
+                        </Route>
+
+                        <Route path="*">
+                            <NotFound />
+                        </Route>
+                    </Switch>
+                    <FbMessenger />
+                </Router>
+            </div>
+        </userContext.Provider>
+    );
 }
 
 export default App;
