@@ -6,8 +6,6 @@ import { useForm } from "react-hook-form";
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from "./firebase.config";
-import GoogleLogin from "./GoogleLogin";
-import FacebookLogin from "./FacebookLogin";
 import { userContext } from "./../../App";
 
 if (!firebase.apps.length) {
@@ -69,10 +67,6 @@ const Signup = () => {
             <div className="login-page-style d-flex justify-content-center align-items-center">
                 <div className="main_div container-sm">
                     <div className="title">Signup Form</div>
-                    <div className="social_icons">
-                        <GoogleLogin />
-                        <FacebookLogin />
-                    </div>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <p className="text-center text-success">
                             {successUser}

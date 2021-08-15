@@ -4,7 +4,6 @@ import { Link, useHistory, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLock, faUser } from "@fortawesome/free-solid-svg-icons";
 import GoogleLogin from "./GoogleLogin";
-import FacebookLogin from "./FacebookLogin";
 import { useForm } from "react-hook-form";
 import firebase from "firebase/app";
 import "firebase/auth";
@@ -49,7 +48,6 @@ const Login = () => {
                     <div className="title">Login Form</div>
                     <div className="social_icons">
                         <GoogleLogin />
-                        <FacebookLogin />
                     </div>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="input_box">
