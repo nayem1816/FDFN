@@ -69,7 +69,7 @@ const RegisterForm = () => {
             nidFrontImageUrl,
             nidBackImageUrl,
         };
-        fetch("http://localhost:3032/registerForm", {
+        fetch("https://hidden-everglades-14055.herokuapp.com/registerForm", {
             method: "POST",
             headers: {
                 "Content-type": "application/json",

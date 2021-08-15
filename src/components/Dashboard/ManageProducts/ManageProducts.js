@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const ManageProducts = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:3032/products")
+        fetch("https://hidden-everglades-14055.herokuapp.com/products")
             .then((res) => res.json())
             .then((data) => {
                 setProducts(data);
@@ -14,9 +14,12 @@ const ManageProducts = () => {
     let count = 1;
 
     const handleDelatePd = (id) => {
-        fetch("http://localhost:3032/productDelete/" + id, {
-            method: "DELETE",
-        })
+        fetch(
+            "https://hidden-everglades-14055.herokuapp.com/productDelete/" + id,
+            {
+                method: "DELETE",
+            }
+        )
             .then((res) => res.json())
             .then((result) => {
                 console.log("delete Successfully");

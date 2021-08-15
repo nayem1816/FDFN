@@ -14,7 +14,7 @@ const HomeMovies = () => {
     const [movieData, setMovieData] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3032/movies")
+        fetch("https://hidden-everglades-14055.herokuapp.com/movies")
             .then((res) => res.json())
             .then((data) => {
                 setMovieData(data);

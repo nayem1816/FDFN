@@ -10,7 +10,7 @@ const TariffsLocal = () => {
     );
 
     useEffect(() => {
-        fetch("http://localhost:3032/packages")
+        fetch("https://hidden-everglades-14055.herokuapp.com/packages")
             .then((res) => res.json())
             .then((data) => {
                 setDataPlan(data);

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const ManagePackages = () => {
     const [packages, setPackages] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:3032/packages")
+        fetch("https://hidden-everglades-14055.herokuapp.com/packages")
             .then((res) => res.json())
             .then((data) => {
                 setPackages(data);
@@ -14,9 +14,12 @@ const ManagePackages = () => {
     let count = 1;
 
     const handleDelatePd = (id) => {
-        fetch("http://localhost:3032/packageDelete/" + id, {
-            method: "DELETE",
-        })
+        fetch(
+            "https://hidden-everglades-14055.herokuapp.com/packageDelete/" + id,
+            {
+                method: "DELETE",
+            }
+        )
             .then((res) => res.json())
             .then((result) => {
                 console.log("delete Successfully");

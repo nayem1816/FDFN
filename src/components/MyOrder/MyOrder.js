@@ -6,7 +6,10 @@ const MyOrder = () => {
     const [loggedInUser] = useContext(userContext);
     const [orderList, setOrderList] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:3032/orderEmail?email=" + loggedInUser.email)
+        fetch(
+            "https://hidden-everglades-14055.herokuapp.com/orderEmail?email=" +
+                loggedInUser.email
+        )
             .then((res) => res.json())
             .then((data) => setOrderList(data));
     }, [loggedInUser.email]);

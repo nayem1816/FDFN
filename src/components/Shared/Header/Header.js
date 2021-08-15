@@ -25,7 +25,10 @@ const Header = () => {
     // const localStorageToken = localStorage.getItem("token");
 
     useEffect(() => {
-        fetch("http://localhost:3032/isAdmin?email=" + loggedInUser.email)
+        fetch(
+            "https://hidden-everglades-14055.herokuapp.com/isAdmin?email=" +
+                loggedInUser.email
+        )
             .then((res) => res.json())
             .then((data) => setAdminEmail(data[0]));
     }, [loggedInUser.email]);

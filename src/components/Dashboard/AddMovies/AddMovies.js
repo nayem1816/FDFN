@@ -28,7 +28,7 @@ const AddMovies = () => {
         const moviesData = { ...data, imageUrl };
         console.log(moviesData);
 
-        fetch("http://localhost:3032/allMovies", {
+        fetch("https://hidden-everglades-14055.herokuapp.com/allMovies", {
             method: "POST",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify(moviesData),
@@ -41,7 +41,7 @@ const AddMovies = () => {
     };
 
     useEffect(() => {
-        fetch("http://localhost:3032/movies")
+        fetch("https://hidden-everglades-14055.herokuapp.com/movies")
             .then((res) => res.json())
             .then((data) => {
                 setMovieShow(data);
@@ -50,9 +50,12 @@ const AddMovies = () => {
     let count = 1;
 
     const handleDelatePd = (id) => {
-        fetch("http://localhost:3032/movieDelete/" + id, {
-            method: "DELETE",
-        })
+        fetch(
+            "https://hidden-everglades-14055.herokuapp.com/movieDelete/" + id,
+            {
+                method: "DELETE",
+            }
+        )
             .then((res) => res.json())
             .then((result) => {
                 console.log("delete Successfully");

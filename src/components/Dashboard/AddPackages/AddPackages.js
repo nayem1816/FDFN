@@ -5,7 +5,7 @@ const AddPackages = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = (data) => {
         const packagesData = { ...data };
-        fetch("http://localhost:3032/addPackages", {
+        fetch("https://hidden-everglades-14055.herokuapp.com/addPackages", {
             method: "POST",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify(packagesData),

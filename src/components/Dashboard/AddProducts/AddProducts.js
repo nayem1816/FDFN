@@ -25,7 +25,7 @@ const AddProducts = () => {
     const onSubmit = (data) => {
         const allProducts = { ...data, imageUrl };
 
-        fetch("http://localhost:3032/addProducts", {
+        fetch("https://hidden-everglades-14055.herokuapp.com/addProducts", {
             method: "POST",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify(allProducts),

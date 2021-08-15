@@ -8,7 +8,7 @@ import Header from "../../../Shared/Header/Header";
 const OnlineStoreDetails = () => {
     const [storeData, setStoreData] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:3032/products")
+        fetch("https://hidden-everglades-14055.herokuapp.com/products")
             .then((res) => res.json())
             .then((data) => {
                 setStoreData(data);

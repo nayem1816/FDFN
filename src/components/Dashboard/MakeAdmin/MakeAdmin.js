@@ -7,7 +7,7 @@ const MakeAdmin = () => {
     const [admins, setAdmins] = useState([]);
     const onSubmit = (data) => {
         const adminEmail = data;
-        fetch("http://localhost:3032/makeAdmin", {
+        fetch("https://hidden-everglades-14055.herokuapp.com/makeAdmin", {
             method: "POST",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify(adminEmail),
@@ -20,7 +20,7 @@ const MakeAdmin = () => {
             });
     };
     useEffect(() => {
-        fetch("http://localhost:3032/admins")
+        fetch("https://hidden-everglades-14055.herokuapp.com/admins")
             .then((res) => res.json())
             .then((data) => {
                 setAdmins(data);

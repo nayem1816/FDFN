@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const RegisteredPeople = () => {
     const [registerCustomer, setRegisterCustomer] = useState([]);
-    fetch("http://localhost:3032/registeredCustomer")
+    fetch("https://hidden-everglades-14055.herokuapp.com/registeredCustomer")
         .then((res) => res.json())
         .then((data) => {
             setRegisterCustomer(data);
@@ -13,9 +13,12 @@ const RegisteredPeople = () => {
     let count = 1;
 
     const handleDelatePd = (id) => {
-        fetch("http://localhost:3032/RegSubDelete/" + id, {
-            method: "DELETE",
-        })
+        fetch(
+            "https://hidden-everglades-14055.herokuapp.com/RegSubDelete/" + id,
+            {
+                method: "DELETE",
+            }
+        )
             .then((res) => res.json())
             .then((result) => {
                 console.log("delete Successfully");

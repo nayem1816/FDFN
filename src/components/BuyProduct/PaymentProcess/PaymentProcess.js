@@ -26,7 +26,7 @@ const PaymentProcess = ({ singleProduct, pdCount, newPrice }) => {
         };
 
         console.log(buyProducts);
-        fetch("http://localhost:3032/buyProducts", {
+        fetch("https://hidden-everglades-14055.herokuapp.com/buyProducts", {
             method: "POST",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify(buyProducts),

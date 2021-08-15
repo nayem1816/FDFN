@@ -4,7 +4,9 @@ import OrderListDetails from "./OrderListDetails/OrderListDetails";
 const OrderList = () => {
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:3032/buySuccessProducts")
+        fetch(
+            "https://hidden-everglades-14055.herokuapp.com/buySuccessProducts"
+        )
             .then((res) => res.json())
             .then((data) => setOrders(data));
     }, []);

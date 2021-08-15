@@ -24,6 +24,7 @@ const Signup = () => {
     const [showMessage, setShowMessage] = useState();
     let history = useHistory();
     let location = useLocation();
+    const [successUser, setSuccessUser] = useState("");
 
     let { from } = location.state || { from: { pathname: "/" } };
     const { register, handleSubmit } = useForm();
@@ -36,9 +37,11 @@ const Signup = () => {
                 .createUserWithEmailAndPassword(data.email, data.password)
                 .then((userCredential) => {
                     userName(data.name);
+                    setSuccessUser("User Create Successfully");
+                    // alert("User Create Successfully");
                     // const { email } = userCredential.user;
-                    // const signedUpUser = { name: data.name, email };
-                    // setLoggedInUser(signedUpUser);
+                    // const userName = { name: data.name };
+                    // setLoggedInUser(userName);
                     history.replace(from);
                 })
                 .catch((error) => {
@@ -64,7 +67,6 @@ const Signup = () => {
     };
     return (
         <div className="">
-            <Header />
             <div className="login-page-style d-flex justify-content-center align-items-center">
                 <div className="main_div container-sm">
                     <div className="title">Signup Form</div>
@@ -73,6 +75,9 @@ const Signup = () => {
                         <FacebookLogin />
                     </div>
                     <form onSubmit={handleSubmit(onSubmit)}>
+                        <p className="text-center text-success">
+                            {successUser}
+                        </p>
                         <div className="input_box">
                             <input
                                 type="text"

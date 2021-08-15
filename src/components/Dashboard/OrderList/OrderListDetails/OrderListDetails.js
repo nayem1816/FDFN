@@ -10,11 +10,14 @@ const OrderListDetails = ({ order, count }) => {
         const updateStatus = data;
         const updateData = { updateStatus, id };
 
-        fetch("http://localhost:3032/updateStatus/" + id, {
-            method: "PATCH",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(updateData),
-        })
+        fetch(
+            "https://hidden-everglades-14055.herokuapp.com/updateStatus/" + id,
+            {
+                method: "PATCH",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(updateData),
+            }
+        )
             .then((res) => res.json())
             .then((data) => {
                 console.log("Updated");
