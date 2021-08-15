@@ -33,11 +33,8 @@ function App() {
                 photo: photoURL,
             };
             setLoggedInUser(userInfo);
-            // console.log(user);
         });
-    }, []);
-
-    console.log(loggedInUser);
+    }, [auth]);
 
     return (
         <userContext.Provider value={[loggedInUser, setLoggedInUser]}>
