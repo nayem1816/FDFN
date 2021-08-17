@@ -1,16 +1,20 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { useHistory } from "react-router-dom";
 
 const ManagePackages = () => {
     const [packages, setPackages] = useState([]);
+    const history = useHistory();
     useEffect(() => {
         fetch("https://hidden-everglades-14055.herokuapp.com/packages")
             .then((res) => res.json())
             .then((data) => {
                 setPackages(data);
             });
-    }, []);
+    }, [packages]);
     let count = 1;
 
     const handleDelatePd = (id) => {
@@ -22,7 +26,10 @@ const ManagePackages = () => {
         )
             .then((res) => res.json())
             .then((result) => {
-                console.log("delete Successfully");
+                alert(
+                    "delete Successfully",
+                    history.push("/dashboard/managePackages")
+                );
             });
     };
 
@@ -50,10 +57,11 @@ const ManagePackages = () => {
                                 <td>{pak?.packagePrice}</td>
                                 <td>
                                     <Link
+                                        className=""
                                         onClick={() => handleDelatePd(pak?._id)}
                                         to="#"
                                     >
-                                        Delete
+                                        <FontAwesomeIcon icon={faTrash} />
                                     </Link>
                                 </td>
                                 <td>

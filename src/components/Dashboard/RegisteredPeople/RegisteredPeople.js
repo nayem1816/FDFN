@@ -1,15 +1,22 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const RegisteredPeople = () => {
     const [registerCustomer, setRegisterCustomer] = useState([]);
-    fetch("https://hidden-everglades-14055.herokuapp.com/registeredCustomer")
-        .then((res) => res.json())
-        .then((data) => {
-            setRegisterCustomer(data);
-        });
+    useEffect(() => {
+        fetch(
+            "https://hidden-everglades-14055.herokuapp.com/registeredCustomer"
+        )
+            .then((res) => res.json())
+            .then((data) => {
+                setRegisterCustomer(data);
+            });
+    }, [registerCustomer]);
+
     let count = 1;
 
     const handleDelatePd = (id) => {
@@ -52,7 +59,7 @@ const RegisteredPeople = () => {
                                         }
                                         to="#"
                                     >
-                                        Delete
+                                        <FontAwesomeIcon icon={faTrash} />
                                     </Link>
                                 </td>
                                 <td>

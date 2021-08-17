@@ -77,7 +77,6 @@ function App() {
                         <Route path="/myOrder">
                             <MyOrder />
                         </Route>
-
                         <Route path="*">
                             <NotFound />
                         </Route>

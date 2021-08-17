@@ -4,8 +4,8 @@ import "./DashboardSidebar.css";
 
 const DashboardSidebar = ({ sidebarToggle }) => {
     return (
-        <div className="dashboard-sidebar mt-5">
-            <ul onClick={sidebarToggle}>
+        <div className="dashboard-sidebar mt-5 overflow-auto">
+            <ul className="pb-5" onClick={sidebarToggle}>
                 <li>
                     <Link
                         to="/dashboard/orderList"
@@ -60,6 +60,14 @@ const DashboardSidebar = ({ sidebarToggle }) => {
                         className="dashboard-navigation"
                     >
                         Add Movies
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        to="/dashboard/manageTestimonial"
+                        className="dashboard-navigation"
+                    >
+                        Testimonial
                     </Link>
                 </li>
                 <li>

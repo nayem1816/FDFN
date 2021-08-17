@@ -1,14 +1,14 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
-const AddMovies = () => {
+const ManageTestimonial = () => {
     const { register, handleSubmit, reset } = useForm();
     const [imageUrl, setImageUrl] = useState("");
-    const [movieShow, setMovieShow] = useState();
+    const [testimonials, setTestimonials] = useState();
 
     const handleUploadImage = (event) => {
         const imgData = new FormData();
@@ -26,32 +26,33 @@ const AddMovies = () => {
     };
 
     const onSubmit = (data) => {
-        const moviesData = { ...data, imageUrl };
+        const testimonialData = { ...data, imageUrl };
 
-        fetch("https://hidden-everglades-14055.herokuapp.com/allMovies", {
+        fetch("https://hidden-everglades-14055.herokuapp.com/testimonialData", {
             method: "POST",
             headers: { "Content-type": "application/json" },
-            body: JSON.stringify(moviesData),
+            body: JSON.stringify(testimonialData),
         })
             .then((res) => res.json)
             .then((data) => {
-                alert("Movies added successfully.");
+                alert("Testimonial Added Successfully");
                 reset();
             });
     };
 
     useEffect(() => {
-        fetch("https://hidden-everglades-14055.herokuapp.com/movies")
+        fetch("https://hidden-everglades-14055.herokuapp.com/testimonials")
             .then((res) => res.json())
             .then((data) => {
-                setMovieShow(data);
+                setTestimonials(data);
             });
-    }, [movieShow]);
+    }, []);
     let count = 1;
 
     const handleDelatePd = (id) => {
         fetch(
-            "https://hidden-everglades-14055.herokuapp.com/movieDelete/" + id,
+            "https://hidden-everglades-14055.herokuapp.com/testimonialDelete/" +
+                id,
             {
                 method: "DELETE",
             }
@@ -62,23 +63,27 @@ const AddMovies = () => {
             });
     };
 
+    console.log(testimonials);
+
     return (
         <div>
-            <h1>Add Movies</h1>
+            <h1>Testimonial Details</h1>
             <div className="mt-5 mx-3">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="row g-5">
                         <div className="col-md-6">
-                            <h5>Movie Name*</h5>
+                            <h5>Name*</h5>
                             <input
                                 type="text"
                                 className="form-control"
-                                placeholder="Movie Name"
-                                {...register("movieName", { required: true })}
+                                placeholder="Name"
+                                {...register("testimonialName", {
+                                    required: true,
+                                })}
                             />
                         </div>
                         <div className="col-md-6">
-                            <h5>Movie Banner*</h5>
+                            <h5>Profile Image*</h5>
                             <input
                                 type="file"
                                 className="form-control"
@@ -86,34 +91,12 @@ const AddMovies = () => {
                             />
                         </div>
                         <div className="col-md-6">
-                            <h5>Movie Rating*</h5>
+                            <h5>Title*</h5>
                             <input
                                 type="text"
                                 className="form-control"
-                                placeholder="Movie Rating"
-                                {...register("movieRating", {
-                                    required: true,
-                                })}
-                            />
-                        </div>
-                        <div className="col-md-6">
-                            <h5>Release Year*</h5>
-                            <input
-                                type="text"
-                                className="form-control"
-                                placeholder="Release Year"
-                                {...register("releaseYear", {
-                                    required: true,
-                                })}
-                            />
-                        </div>
-                        <div className="col-md-6">
-                            <h5>Download Link*</h5>
-                            <input
-                                type="text"
-                                className="form-control"
-                                placeholder="Download Link"
-                                {...register("downloadLink", {
+                                placeholder="Title"
+                                {...register("testimonialTitle", {
                                     required: true,
                                 })}
                             />
@@ -123,7 +106,7 @@ const AddMovies = () => {
                             <input
                                 type="text"
                                 className="form-control"
-                                placeholder="Movie description"
+                                placeholder="Description"
                                 {...register("description", { required: true })}
                             />
                         </div>
@@ -131,36 +114,34 @@ const AddMovies = () => {
                             <input
                                 className="btn btn-dark"
                                 type="submit"
-                                value="Add Movie"
+                                value="Add Testimonial"
                             />
                         </div>
                     </div>
                 </form>
             </div>
             <div className="mt-5">
-                <h2>Manages Movies</h2>
+                <h2>Manages Testimonials</h2>
                 <div className="mt-5 mx-3">
                     <table className="table table-striped">
                         <thead>
                             <tr>
                                 <th scope="col">#ID</th>
-                                <th scope="col">Movie Name</th>
-                                <th scope="col">Release Year</th>
-                                <th scope="col">Rating</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Title</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {movieShow?.map((movie) => (
+                            {testimonials?.map((testimonial) => (
                                 <tr>
                                     <td>{count++}</td>
-                                    <td>{movie?.movieName}</td>
-                                    <td>{movie?.releaseYear}</td>
-                                    <td>{movie?.movieRating}</td>
+                                    <td>{testimonial?.testimonialName}</td>
+                                    <td>{testimonial?.testimonialTitle}</td>
                                     <td>
                                         <Link
                                             onClick={() =>
-                                                handleDelatePd(movie?._id)
+                                                handleDelatePd(testimonial?._id)
                                             }
                                             to="#"
                                         >
@@ -177,4 +158,4 @@ const AddMovies = () => {
     );
 };
 
-export default AddMovies;
+export default ManageTestimonial;

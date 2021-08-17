@@ -24,7 +24,7 @@ const MakeAdmin = () => {
             .then((data) => {
                 setAdmins(data);
             });
-    }, []);
+    }, [admins]);
 
     let count = 1;
 
@@ -61,7 +61,6 @@ const MakeAdmin = () => {
                             <tr>
                                 <th scope="col">#ID</th>
                                 <th scope="col">EMAIL</th>
-                                <th scope="col">ACTION</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -69,9 +68,6 @@ const MakeAdmin = () => {
                                 <tr>
                                     <td>{count++}</td>
                                     <td>{admin.email}</td>
-                                    <td>
-                                        <a href="#">Delete</a>
-                                    </td>
                                 </tr>
                             ))}
                         </tbody>

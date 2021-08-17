@@ -51,7 +51,7 @@ const OnlineStoreDetails = () => {
                             Description: {singleStore?.description}
                         </h6>
                         <Link
-                            to={`/buyProducts/${singleStore?.id}`}
+                            to={`/buyProducts/${singleStore?._id}`}
                             className="btn store-details-btn-style"
                         >
                             Buy Now

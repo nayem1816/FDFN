@@ -16,6 +16,7 @@ import RegisteredPeople from "../RegisteredPeople/RegisteredPeople";
 import { userContext } from "../../../App";
 import firebase from "firebase/app";
 import "firebase/auth";
+import ManageTestimonial from "../TestimonialDb/ManageTestimonial";
 
 const Dashboard = () => {
     const [sidebarToggle, setSidebarToggle] = useState(false);
@@ -108,7 +109,7 @@ const Dashboard = () => {
                         </div>
                     </div>
 
-                    <div className="main-dashboard p-3">
+                    <div className="main-dashboard p-3 overflow-auto">
                         <Switch>
                             <Route exact path="/dashboard">
                                 <OrderList />
@@ -133,6 +134,9 @@ const Dashboard = () => {
                             </Route>
                             <Route path="/dashboard/addMovies">
                                 <AddMovies />
+                            </Route>
+                            <Route path="/dashboard/manageTestimonial">
+                                <ManageTestimonial />
                             </Route>
                             <Route path="/dashboard/registeredCustomer">
                                 <RegisteredPeople />

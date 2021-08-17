@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const ManageProducts = () => {
     const [products, setProducts] = useState([]);
@@ -10,7 +12,7 @@ const ManageProducts = () => {
             .then((data) => {
                 setProducts(data);
             });
-    }, []);
+    }, [products]);
     let count = 1;
 
     const handleDelatePd = (id) => {
@@ -50,7 +52,7 @@ const ManageProducts = () => {
                                         onClick={() => handleDelatePd(pd?._id)}
                                         to="#"
                                     >
-                                        Delete
+                                        <FontAwesomeIcon icon={faTrash} />
                                     </Link>
                                 </td>
                             </tr>

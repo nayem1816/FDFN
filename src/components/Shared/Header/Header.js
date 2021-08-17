@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { faBars, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useContext, useEffect, useState } from "react";
@@ -128,14 +129,13 @@ const Header = () => {
                     </div>
                     <div className="">
                         {loggedInUser.email ? (
-                            <div className="d-flex align-items-center">
+                            <div className="d-flex align-items-center dropdown">
                                 <Link
-                                    onClick={handleSignOut}
-                                    className="rounded-circle user-icon"
+                                    className="rounded-circle user-icon dropdown-toggle"
                                     to="#"
-                                    data-bs-toggle="tooltip"
-                                    data-bs-placement="right"
-                                    title="Logout"
+                                    id="dropdownMenuButton1"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
                                 >
                                     {loggedInUser.photo ? (
                                         <img
@@ -151,6 +151,20 @@ const Header = () => {
                                         />
                                     )}
                                 </Link>
+                                <ul
+                                    class="dropdown-menu"
+                                    aria-labelledby="dropdownMenuButton1"
+                                >
+                                    <li>
+                                        <a
+                                            onClick={handleSignOut}
+                                            className="dropdown-item"
+                                            href="/"
+                                        >
+                                            Logout
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         ) : (
                             <div className="d-flex align-items-center">

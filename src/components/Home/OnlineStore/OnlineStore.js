@@ -62,6 +62,7 @@ const OnlineStore = () => {
                             <div className="text-center rounded p-3">
                                 <Link to="">
                                     <img
+                                        style={{ height: "200px" }}
                                         className="img-fluid"
                                         src={product.imageUrl}
                                         alt=""
