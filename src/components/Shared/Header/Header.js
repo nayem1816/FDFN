@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { faBars, faUser } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useContext, useEffect, useState } from "react";
-import { Link, useHistory } from "react-router-dom";
-import "./Header.css";
-import { userContext } from "./../../../App";
-import firebase from "firebase/app";
-import "firebase/auth";
+import { faBars, faUser } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useContext, useEffect, useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
+import './Header.css';
+import { userContext } from './../../../App';
+import firebase from 'firebase/app';
+import 'firebase/auth';
 
 const Header = () => {
     const [loggedInUser, setLoggedInUser] = useContext(userContext);
@@ -21,13 +21,13 @@ const Header = () => {
             setNavbarScroll(false);
         }
     };
-    window.addEventListener("scroll", scrollHeader);
+    window.addEventListener('scroll', scrollHeader);
 
     // const localStorageToken = localStorage.getItem("token");
 
     useEffect(() => {
         fetch(
-            "https://hidden-everglades-14055.herokuapp.com/isAdmin?email=" +
+            'https://hidden-everglades-14055.herokuapp.com/isAdmin?email=' +
                 loggedInUser.email
         )
             .then((res) => res.json())
@@ -41,15 +41,15 @@ const Header = () => {
             .then(() => {
                 const signOutUser = {
                     isSSignIn: false,
-                    name: "",
-                    email: "",
-                    photo: "",
+                    name: '',
+                    email: '',
+                    photo: '',
                 };
                 setLoggedInUser(signOutUser);
-                history.push("/");
+                history.push('/');
             })
             .catch((error) => {
-                alert("Please again sign out");
+                alert('Please again sign out');
             });
     };
 
@@ -57,8 +57,8 @@ const Header = () => {
         <div
             className={
                 navbarScroll
-                    ? "navbar-bg-color active fixed-top"
-                    : "navbar-bg-color fixed-top"
+                    ? 'navbar-bg-color active fixed-top'
+                    : 'navbar-bg-color fixed-top'
             }
         >
             <nav className="">
@@ -104,7 +104,7 @@ const Header = () => {
                                         </Link>
                                     </li>
                                 ) : (
-                                    ""
+                                    ''
                                 )}
                                 {adminEmail?.email && (
                                     <li>
@@ -140,8 +140,8 @@ const Header = () => {
                                     {loggedInUser.photo ? (
                                         <img
                                             className="img-fluid rounded-circle"
-                                            src={loggedInUser.photo}
-                                            alt=""
+                                            src={loggedInUser?.photo}
+                                            alt="https://i.ibb.co/g3MGk57/avator.png"
                                         />
                                     ) : (
                                         <img
@@ -173,7 +173,7 @@ const Header = () => {
                                     to="login"
                                 >
                                     <FontAwesomeIcon
-                                        style={{ color: "#48C0BF" }}
+                                        style={{ color: '#48C0BF' }}
                                         className="user-icon-style"
                                         icon={faUser}
                                         size="2x"
